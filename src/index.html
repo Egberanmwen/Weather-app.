@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../style/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="details">
+          <div class="headerDiv">
+            <h1 class="heading">
+              five day weather forcast for different cities around the globe
+            </h1>
+          </div>
+          <div class="outer">
+            <div class="formDiv" method="GET">
+              <form action="">
+                <input
+                  type="text"
+                  id="inputField"
+                  placeholder="Enter a city name"
+                />
+                <button type="submit" id="searchBtn">search</button>
+                <button id="currentBtn">current</button>
+              </form>
+            </div>
+          </div>
+          <div class="myDiv">
+            <div class="city">
+              <p id="searching">currently searching ...</p>
+              <p class="cityName"></p>
+            </div>
+            <div class="descriptionDiv">
+              <div class="day">
+                <h2 class="date"></h2>
+                <p class="times"></p>
+              </div>
+              <div class="temp">
+                <p class="notify"></p>
+                <img src="" class="icon" />
+                <p class="tempval">Temperature:</p>
+                <p></p>
+                <p class="celtic fontOne">
+                  <a href="#" class="cell fontOne"
+                    ><sup class="tense">&#176;</sup>C</a
+                  >
+                  <span class="ray">|</span
+                  ><a href="#" class="cell fontOne" id="fahrenTemp"
+                    ><sup class="tense">&#176;</sup>F</a
+                  >
+                  <img src="" class="weatherIcon" />
+                </p>
+              </div>
+              <div class="firstTemp">
+                <div class="humid">
+                  <ul>
+                    <li><p class="weatherDesc">Description:</p></li>
+                    <p class="tempOne"></p>
+                    <li>
+                      <p id="realFeel">Real feel: <sup>&#176;</sup>C</p>
+                    </li>
+                    <li><p id="wind">wind speed</p></li>
+                    <li><p id="pressure">pressure:</p></li>
+                    <li><p id="humidity">Humidity:</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="forecastContainer">
+            <div class="design">
+              <div class="next">
+                <p class="nextFour">Next four day forecast</p>
+              </div>
+            </div>
+            <div class="fourDays">
+              <div class="mydays"></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <p class="photoCredit">
+            Background image courtesy:
+            <a href="https://www.freepiks.com">freepiks.com</a>
+          </p>
+          <footer>&copy;Egberanmwen Iriagbonse, 2022</footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="../main/app.js"></script>
+  </body>
+</html>

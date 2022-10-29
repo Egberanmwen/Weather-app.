@@ -1,0 +1,656 @@
+:root{
+    
+}
+.fontOne{
+    font-size: 2em;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  background: linear-gradient(to bottom, #24c6dc, #514a9d);
+  background-image: url(../images/weather.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container .wrapper {
+  width: 90%;
+  max-width: 900px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.details {
+  width: 80%;
+  position: absolute;
+  bottom: -50%;
+  left: 25%;
+}
+#searching {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 18px;
+}
+.headerDiv {
+  width: 100%;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.heading {
+  margin-top: -20rem;
+  color: #fff;
+}
+.outer {
+  margin-right: 5rem;
+  margin-top: 3rem;
+}
+#searching {
+  margin-left: 30rem;
+  margin-bottom: 4rem;
+}
+form {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form #inputField {
+  height: 100%;
+  padding: 10px 20px;
+  outline: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+  width: 70%;
+  color: #333;
+  margin-left: -16rem;
+}
+  form #searchBtn {
+  padding: 10px 20px;
+  background-color: #827bd3;
+  color: #fff;
+  font-size: 14px;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-right: 1rem;
+  outline: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 50px;
+}
+#searchBtn:hover {
+  background-color: royalblue;
+}
+#currentBtn {
+  padding: 10px 20px;
+  background-color: royalblue;
+  color: #fff;
+  font-size: 14px;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-right: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+}
+#currentBtn:hover {
+  background-color: #827bd3;
+}
+.city {
+  position: relative;
+  top: 100px;
+}
+#searching{
+  position: relative;
+  top: 5rem;
+  right: 30%;
+}
+.cityName {
+  font-size: 20px;
+  margin-left: 3rem;
+  color: #fff;
+  margin-top: 5rem;
+}
+.descriptionDiv {
+  width: 450px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  background-color: #827bd3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 8rem;
+  color: #fff;
+}
+.temp{
+  margin-left: 2rem;
+}
+#pressure,#humidity,#wind,#realFeel,.weatherDesc{
+  font-size: 16px;
+}
+.temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.temp .tempval {
+  margin-left: 2.5rem;
+  font-size: 20px;
+}
+.celtic {
+  position: relative;
+  right: -5%;
+}
+.cell {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+.humid {
+  position: relative;
+}
+.humid ul li {
+  list-style-type: none;
+  padding: 0.3rem;
+  margin-left: 1rem;
+}
+.forecastContainer {
+  margin-top: 5rem;
+}
+.design {
+  width: 60%;
+}
+.next {
+  background-color: #827bd3;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: #fff;
+}
+.next:hover {
+  background-color: royalblue;
+}
+.nextFour {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.fourDays {
+  height: 900px;
+  margin-top: 2rem;
+  width: 100%;
+  color: #fff;
+  border-radius: 5px;
+}
+.day1Temp {
+  margin-top: 1rem;
+}
+.fourDays .mydays {
+  text-align: center;
+  position: relative;
+  top: 6%;
+  padding: 10px;
+}
+.day1 {
+  margin-top: 2rem;
+}
+.innerDay1 {
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+.days {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+.day1:hover {
+  border-radius: 5px;
+  width: 90%;
+  background-color: #827bd3;
+  color: black;
+  height: 200px;
+  margin-top: 2rem;
+}
+.dayTemp,.dayDesc {
+  margin-top: 1rem;
+}
+.butDiv {
+  margin-top: 1.5rem;
+  margin-left: 23rem;
+}
+#okBtn2 {
+  color: #fff;
+  background-color: #ff4500;
+  border: none;
+  border: 2px solid #fff;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+}
+.hide {
+  display: none;
+}
+.bot {
+  margin-left: 2rem;
+  position: relative;
+  top: 10%;
+}
+.door {
+  margin-bottom: 1rem;
+}
+.innerBtnDiv {
+  background-color: rgb(252, 162, 130);
+  border: 1px solid #ff7f50;
+  width: 65px;
+  max-width: 450px;
+  border-radius: 30px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer{
+  margin-top: 100rem;  
+  margin-left: 40%;
+  color: #fff;
+}
+footer{
+  font-weight: bold;
+}
+.footer a{
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+@media all and (min-width: 275px){
+  .container {
+    width: 100%;
+    height: 2000px;
+  }
+  .container .wrapper {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .details {
+    width: 60%;
+    position: absolute;
+    top: 38%;
+    left: 2%;
+  }
+  form {
+    position: absolute;
+    left: 125%;
+    width: 70%;
+    margin-top: 3rem;
+    }
+  #currentBtn{
+    width: 5rem;
+    margin-left: -1em;
+    }
+  #searching{
+    position: relative;
+    right: 28rem;
+    white-space: nowrap;
+  }
+  .descriptionDiv {
+    width: 120%;
+    font-size: 0.7em;
+    margin-left: 2rem;
+    height: 300px;
+    margin-top: 15rem;
+    white-space: nowrap;
+  }
+  .date {
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+  }
+  .times {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .temp {
+    margin-right: 2.5rem;
+  }
+  .fourDays {
+    width: 85%;
+    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 850px;
+    margin-top: -6rem;
+  }
+  .headerDiv {
+    width: 100%;
+    margin-left: 4rem;
+    margin-top: 3rem;
+  }
+    .next {
+      width: 100%;
+      margin-left: 2rem;
+    }
+    .mydays {
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: 230px;
+      width: 300px;
+      font-size: 16px;
+      margin-left: -5%;
+    }
+    .day1 {
+      white-space: nowrap;
+      margin-left: 2.5rem;
+    }
+    
+    .day1:hover {
+      width: 230px;
+      margin-left: 1rem;
+
+    }
+  .btnDiv {
+    position: absolute;
+    right: -80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  #okBtn {
+    width: 80px;
+  }
+  .design {
+    width: 110%;
+  }
+  .innerBtnDiv {
+    position: absolute;
+    right: 10%;
+  }
+  .footer{
+    margin-top: 110rem;  
+    margin-left: 13%;
+  }
+  @media all and (min-width: 375px) {
+  .container {
+    width: 100%;
+    height: 2200px;
+  }
+  .container .wrapper {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .details {
+    width: 80%;
+    position: absolute;
+    top: 38%;
+    left: 5%;
+  }
+  form {
+    position: absolute;
+    left: 70%;
+    width: 70%;
+  }
+  .descriptionDiv {
+    width: 250px;
+    margin-left: 2rem;
+    height: 300px;
+  }
+  .date {
+    margin-bottom: 2rem;
+    margin-right: 3rem;  
+  }
+  .time {
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    font-weight: bold;
+  }
+  .temp {
+    margin-left: -0.5rem;
+  }
+  .fourDays {
+    width: 85%;
+    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 850px;
+    margin-top: -6rem;
+  }
+  .headerDiv {
+    width: 70%;
+    margin-left: 4rem;
+    margin-top: 6rem;
+  }
+  .next {
+    width: 80%;
+    margin-left: 2rem;
+  }
+  .mydays {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 230px;
+    font-size: 16px;
+    margin-left: 18%;
+  }
+  .day1 {
+    margin-left: 1rem;
+  }
+  .day1:hover {
+    width: 200px;
+    margin-left: 1rem;
+  }
+  .btnDiv {
+    position: absolute;
+    right: -80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  #okBtn {
+    width: 80px;
+  }
+  .design {
+    width: 110%;
+  }
+  .innerBtnDiv {
+    position: absolute;
+    right: 10%;
+  }
+}
+  @media all and (min-width: 400px) {
+  .container {
+    width: 100%;
+    height: 2300px;
+  }
+  .container .wrapper {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin-top: 10rem;
+  }
+  form {
+    position: relative;
+    left: 200px;
+    width: 90%;
+  }
+  .descriptionDiv {
+    width: 330px;
+  }
+  .next {
+    width: 80%;
+    margin-left: 2rem;
+  }
+  .temp {
+    margin-left: -0.5rem;
+  }
+  .fourDays {
+    width: 85%;
+    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 980px;
+    margin-top: -6rem;
+  }
+  .details {
+    margin-top: 6rem;
+  }
+  .headerDiv {
+    width: 70%;
+    margin-left: 4rem;
+  }
+  .mydays {
+     margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 230px;
+    font-size: 16px;
+    margin-left: 22%;
+    }
+  .day1:hover {
+    width: 200px;
+  }
+  .footer{  
+    margin-left: 20%;
+    margin-top: 80rem;
+  }
+}
+@media all and (min-width: 700px) {
+  .container {
+    width: 100%;
+    height: 1900px;
+  }
+  .container .wrapper {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .outer {
+    margin-top: 6rem;
+    margin-right: 10%;
+  }
+  form {
+    position: absolute;
+    margin-right: 10rem;
+    width: 70%;
+  }
+  .temp {
+    margin-left: -0.5rem;
+  }
+  .fourDays {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    right: 100px;
+  }
+  .mydays {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: 350px 350px;
+    font-size: 16px;
+    margin-left: 30%;
+  }
+  .day1:hover {
+    width: 240px;
+    margin-left: 3rem;
+  }
+  .myDiv {
+    margin-top: 5rem;
+  }
+  .descriptionDiv {
+    margin-top: 12rem;
+  }
+  .forecastContainer {
+    margin-top: 10rem;
+  }
+  .footer{
+    margin-left: 50%;
+    margin-top: 100rem;
+  }
+}
+@media all and (min-width: 1200px) {
+  .container {
+    width: 100%;
+    height: 1800px;
+  }
+  .heading {
+    white-space: nowrap;
+  }
+  .container .wrapper {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .wrapper.details {
+    position: absolute;
+    top: -60%;
+  }
+  .outer {
+    position: relative;
+    right: 10%;
+    top: 3rem;
+    }
+  form {
+    position: absolute;
+    right: 500px;
+    width: 70%;
+  }
+  form #inputField{
+    margin-left: 9rem;
+  }
+  .headerDiv {
+    margin-left: 14rem;
+  }
+  .myDiv {
+    margin-left: 12rem;
+    position: relative;
+    top: 20%;
+  }
+  .descriptionDiv {
+    width: 300px;
+  }
+  .fourDays {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    top: 100px;
+    right: 100px;
+    margin-left: 14rem;
+  }
+  .forecastContainer {
+    margin-top: 16rem;
+  }
+  .temp {
+    margin-left: -0.5rem;
+  }
+  .day1:hover{
+    width: 250px;
+  }
+    .mydays {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    font-size: 16px;
+    margin-left: -1%;
+  }
+}
+}
+  
