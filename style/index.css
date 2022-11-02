@@ -1,9 +1,6 @@
 :root{
     
 }
-.fontOne{
-    font-size: 2em;
-}
 *{
   margin: 0;
   padding: 0;
@@ -133,40 +130,45 @@ form #inputField {
   justify-content: center;
   flex-direction: column;
   margin-top: 8rem;
+  height: 700px;
   color: #fff;
 }
-.temp{
-  margin-left: 2rem;
-}
 #pressure,#humidity,#wind,#realFeel,.weatherDesc{
-  font-size: 16px;
+  font-size: 18px;
+  margin-right: 2rem;
 }
-.temp {
+.tempContent{
+  margin-bottom: 6rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center; 
 }
-.temp .tempval {
-  margin-left: 2.5rem;
+.templist{
+  display: flex;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+.tempval {
   font-size: 20px;
 }
-.celtic {
+.iconDiv{
   position: relative;
-  right: -5%;
+  top: 35px;
+  left: 130px;
+}
+.date{
+  position: relative;
+  top: 70px;
+}
+.fontOne{
+  margin-left: 1rem;
 }
 .cell {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
-  font-size: 14px;
-}
-.humid {
-  position: relative;
-}
-.humid ul li {
-  list-style-type: none;
-  padding: 0.3rem;
-  margin-left: 1rem;
+  font-size: 18px;
 }
 .forecastContainer {
   margin-top: 5rem;
@@ -179,6 +181,13 @@ form #inputField {
   border-radius: 25px;
   padding: 10px 20px;
   color: #fff;
+}
+.tense{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.ray{
+  margin-top: 0.5rem;
 }
 .next:hover {
   background-color: royalblue;
@@ -277,6 +286,13 @@ footer{
   text-decoration: none;
   font-weight: bold;
   color: white;
+}
+.highlight{
+  color: rgb(33,33,33);
+  cursor: default;
+}
+.highlight:hover{
+  text-decoration: none;
 }
 @media all and (min-width: 275px){
   .container {
