@@ -9,15 +9,14 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.container {
-  background: linear-gradient(to bottom, #24c6dc, #514a9d);
+.container { 
   background-image: url(../images/weather.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  height: 350rem;
 }
 .container .wrapper {
   width: 90%;
@@ -138,7 +137,7 @@ form #inputField {
   margin-right: 2rem;
 }
 .tempContent{
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,15 +150,16 @@ form #inputField {
 }
 .tempval {
   font-size: 20px;
+  margin-right: 4rem;
 }
 .iconDiv{
   position: relative;
-  top: 35px;
-  left: 130px;
+  top: 50px;
+  left: 110px;
 }
 .date{
   position: relative;
-  top: 70px;
+  top: 40px;
 }
 .fontOne{
   margin-left: 1rem;
@@ -176,6 +176,59 @@ form #inputField {
 .design {
   width: 60%;
 }
+.conversionDiv{
+  width: 500px;
+  height: 230px;
+  background-color: #827bd3;
+  margin-left: 30rem;
+
+  border-radius: 5px;
+}
+#glyphicon{
+  margin-top: 2rem;
+}
+.conversionarea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#resultDiv{
+  position: relative;
+  top: 60px;
+  left: 2%;
+}
+#resultContainer{
+  margin-left: 3rem;
+}
+#convertTemp{
+  width: 300px;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #333;
+  position: absolute;
+  left: -25rem;
+}
+#submit{
+  position: absolute;
+  right: 1rem;
+  top: 4rem;
+  padding: 10px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+}
+#tempDiff{
+  padding: 10px;
+  border-radius: 5px;
+  width: 3rem;
+  position:absolute;
+  left: -5rem;
+}
+.formconversion{
+  margin-top: 2rem;
+  position: absolute;
+}
 .next {
   background-color: #827bd3;
   border-radius: 25px;
@@ -189,14 +242,14 @@ form #inputField {
 .ray{
   margin-top: 0.5rem;
 }
-.next:hover {
-  background-color: royalblue;
-}
 .nextFour {
   text-align: center;
   font-size: 16px;
   font-weight: bold;
   text-transform: capitalize;
+}
+.next:hover {
+  background-color: royalblue;
 }
 .fourDays {
   height: 900px;
@@ -233,6 +286,7 @@ form #inputField {
   color: black;
   height: 200px;
   margin-top: 2rem;
+  height: 300px;
 }
 .dayTemp,.dayDesc {
   margin-top: 1rem;
@@ -240,17 +294,6 @@ form #inputField {
 .butDiv {
   margin-top: 1.5rem;
   margin-left: 23rem;
-}
-#okBtn2 {
-  color: #fff;
-  background-color: #ff4500;
-  border: none;
-  border: 2px solid #fff;
-  width: 60px;
-  height: 30px;
-  text-align: center;
-  font-size: 14px;
-  padding: 5px;
 }
 .hide {
   display: none;
@@ -262,17 +305,6 @@ form #inputField {
 }
 .door {
   margin-bottom: 1rem;
-}
-.innerBtnDiv {
-  background-color: rgb(252, 162, 130);
-  border: 1px solid #ff7f50;
-  width: 65px;
-  max-width: 450px;
-  border-radius: 30px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .footer{
   margin-top: 100rem;  
@@ -294,10 +326,14 @@ footer{
 .highlight:hover{
   text-decoration: none;
 }
+.highlight{
+  display: none;
+}
+
 @media all and (min-width: 275px){
   .container {
     width: 100%;
-    height: 2000px;
+    height: 175rem;
   }
   .container .wrapper {
     width: 100%;
@@ -310,6 +346,29 @@ footer{
     position: absolute;
     top: 38%;
     left: 2%;
+  }
+  .conversionDiv{
+    width: 270px;
+    height: 230px;
+    margin-left: 2rem;
+    margin-top: 30rem;
+  }
+  #glyphicon{
+    margin-left: 1.5rem;
+  }
+  #convertTemp{
+    width: 150px;
+    margin-left: 18rem;
+  }
+  #tempDiff{
+    margin-left: 8rem;
+    position: absolute;
+    bottom: 7%;
+  }
+  #submit{
+    margin-top: -0.1rem;
+    position: absolute;
+    right: -7rem;
   }
   form {
     position: absolute;
@@ -360,28 +419,26 @@ footer{
     margin-left: 4rem;
     margin-top: 3rem;
   }
-    .next {
-      width: 100%;
-      margin-left: 2rem;
+  .next {
+    width: 100%;
+    margin-left: 4rem;
     }
-    .mydays {
-      margin-top: 4rem;
-      display: grid;
-      grid-template-columns: 230px;
-      width: 300px;
-      font-size: 16px;
-      margin-left: -5%;
-    }
-    .day1 {
-      white-space: nowrap;
-      margin-left: 2.5rem;
-    }
-    
-    .day1:hover {
-      width: 230px;
-      margin-left: 1rem;
-
-    }
+  .mydays {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 230px;
+    width: 300px;
+    font-size: 16px;
+    margin-left: -5%;
+  }
+  .day1 {
+    white-space: nowrap;
+    margin-left: 6.5rem;
+  }
+  .day1:hover {
+    width: 230px;
+    margin-left: 4rem;
+  }
   .btnDiv {
     position: absolute;
     right: -80%;
@@ -400,19 +457,44 @@ footer{
     right: 10%;
   }
   .footer{
-    margin-top: 110rem;  
+    margin-top: 15rem;  
     margin-left: 13%;
   }
-  @media all and (min-width: 375px) {
+  .footer{
+    margin-left: 30%;
+  }
+@media all and (min-width: 375px) {
   .container {
     width: 100%;
-    height: 2200px;
+    height: 180rem;
   }
   .container .wrapper {
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
     margin: 0 auto;
+  }
+  
+  .conversionDiv{
+    width: 330px;
+    height: 230px;
+    margin-left: 0.5rem;
+    margin-top: 30rem;
+  }
+  #glyphicon{
+    margin-left: 1.5rem;
+  }
+  #convertTemp{
+    width: 250px;
+    margin-left: 15rem;
+  }
+  #tempDiff{
+    margin-left: 12rem;
+  }
+  #submit{
+    margin-top: -0.1rem;
+    position: absolute;
+    right: -9rem;
   }
   .details {
     width: 80%;
@@ -466,6 +548,9 @@ footer{
     font-size: 16px;
     margin-left: 18%;
   }
+  .weatherDesc,.date,.tempval{
+    margin-left: 1.5rem;
+  }
   .day1 {
     margin-left: 1rem;
   }
@@ -490,11 +575,15 @@ footer{
     position: absolute;
     right: 10%;
   }
+  .footer{
+    margin-top: 20rem;
+    margin-left: 30%;
+  }
 }
   @media all and (min-width: 400px) {
   .container {
     width: 100%;
-    height: 2300px;
+    height: 200rem
   }
   .container .wrapper {
     width: 100%;
@@ -516,6 +605,37 @@ footer{
   }
   .temp {
     margin-left: -0.5rem;
+  }
+  .conversionDiv{
+    width: 350px;
+    height: 230px;
+    margin-left: 0.5rem;
+    margin-top: 30rem;
+
+  }
+  #tempDiff{
+    position: relative;
+    top: 2rem;
+    left: 10rem;
+  }
+  #convertTemp{
+    width: 250px;
+    margin-top: 4rem;
+    margin-left: 2rem;
+  }
+  .selectDiv{
+    position: absolute;
+    right: 13rem;
+  }
+  .inputversion{
+    position: absolute;
+    right: 13rem;
+  }
+  #submit{
+    margin-top: 2rem;
+  }
+  #glyphicon{
+   margin-left: 1rem;
   }
   .fourDays {
     width: 85%;
@@ -539,24 +659,50 @@ footer{
     font-size: 16px;
     margin-left: 22%;
     }
+  .day1 {
+    margin-left: 1rem;
+  }
   .day1:hover {
     width: 200px;
+    margin-left: 1rem;
   }
   .footer{  
     margin-left: 20%;
-    margin-top: 80rem;
+    margin-top: 15rem;
   }
 }
 @media all and (min-width: 700px) {
   .container {
     width: 100%;
-    height: 1900px;
+    height: 170rem;
+  }
+  .allModal{
+    margin-right: 40rem;
   }
   .container .wrapper {
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
     margin: 0 auto;
+  }
+  .conversionDiv{
+    width: 460px;
+    height: 230px;
+    margin-left: 7rem;
+    margin-top: 30rem;
+  }
+  #convertTemp{
+    width: 250px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+  #tempDiff{
+    margin-bottom: 3rem;
+  }
+  #submit{
+    position: relative;
+    bottom: 6rem;
+    left: 10rem;
   }
   .outer {
     margin-top: 6rem;
@@ -596,15 +742,16 @@ footer{
   .forecastContainer {
     margin-top: 10rem;
   }
-  .footer{
-    margin-left: 50%;
-    margin-top: 100rem;
+  
+  .footer{  
+    margin-left: 35%;
+    margin-top: 10rem;
   }
 }
 @media all and (min-width: 1200px) {
   .container {
     width: 100%;
-    height: 1800px;
+    height: 200rem;
   }
   .heading {
     white-space: nowrap;
@@ -614,6 +761,10 @@ footer{
     max-width: 1200px;
     overflow: hidden;
     margin: 0 auto;
+  }
+  .conversionDiv{
+    margin-left: 30rem;
+    margin-bottom: 45rem;
   }
   .wrapper.details {
     position: absolute;
@@ -666,6 +817,11 @@ footer{
     grid-template-columns: 250px 250px 250px 250px;
     font-size: 16px;
     margin-left: -1%;
+  }
+  .footer{  
+    margin-left: 45%;
+    position: relative; 
+    top: -600px;
   }
 }
 }
