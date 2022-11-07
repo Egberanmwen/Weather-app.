@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,31 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../style/index1.css" />
   </head>
-  <body>
+  <body >
     <div class="container">
       <div class="wrapper">
         <div class="details">
           <div class="headerDiv">
-            <h1 class="heading">
-              five day weather forecast for different cities around the globe
-            </h1>
+            <h1 class="heading">five days weather forecast for different cities around the globe</h1>
           </div>
           <div class="outer">
             <div class="formDiv" method="GET">
               <form action="">
-                <input
-                  type="text"
-                  id="inputField"
-                  placeholder="Enter a city name"
-                />
+                <input type="text" id="inputField" placeholder="Enter a city name"/>
                 <button type="submit" id="searchBtn">search</button>
                 <button id="currentBtn">current</button>
-              </form>
+              </form>    
             </div>
-          </div>
-          <div class="myDiv">
+        </div>
+        <div class="myDiv">
             <div class="city">
               <p id="searching">currently searching ...</p>
               <p class="cityName"></p>
@@ -45,43 +39,60 @@
                     <img src="" class="icon" alt="">
                   </div>
                   <p class="weatherDesc"></p><br>
-                  <div class="templist">
-                    <p class="tempval value"> </p>  
-                    <a href="#" class="cell fontOne " id="celsiusT">
-                    <sup class="tense">&#176;</sup>C</a>
-                    <span class="ray">|</span>
-                    <a href="#" class="cell " id="fahrenTemp">
-                      <sup class="tense">&#176;</sup>F</a>
-                  </div>
-                    <p id="pressure"></p><br>
-                    <p id="wind"></p><br>
-                    <p id="realFeel"></p><br>
-                    <p id="humidity"></p><br>           
+                  <p class="tempval value"> <sup>&#176;</sup>C</p> 
+                  <p id="pressure"></p><br>
+                  <p id="wind"><sup>&#176;</sup>C</p><br>
+                  <p id="realFeel"></p><br>
+                  <p id="humidity"></p><br>         
                 </div>
-              </div>            
-              
-          </div>
-          <div class="forecastContainer">
+              </div>             
+            </div>
+           
+            <div class="forecastContainer">
             <div class="design">
-              <div class="next">
-                <p class="nextFour">Next four day forecast</p>
+                <div class="next">
+                  <p class="nextFour">Weather Forecast for the next four days</p>
+                </div>
+              </div>
+              <div class="fourDays">
+                <div class="mydays">
+                </div>
               </div>
             </div>
-            <div class="fourDays">
-              <div class="mydays"></div>
+          </div>
+          <div class="conversionDiv">
+            <div class="conversionarea">
+              <p id="parTemp"></p>
+              <p id="glyphicon">please enter the temperature you would like to convert</p>
+              <div class="formconversion">
+                <form action="" id="myForm" onsubmit="calculateTemp();return false ">
+                  <input type="text" name="" id="convertTemp"/>
+                  <div class="selectDiv">
+                    <select name="" id="tempDiff">
+                      <option value="1">Celsius</option>
+                      <option value="2">Fahrenheit</option>
+                    </select>
+                  </div>
+                  <div class="inputversion">
+                      <input type="submit"id="submit" value="submit">
+                   </div>
+                </form>
+              </div>
+            </div>
+            <div class="resultDiv">
+              <span id="resultContainer"></span>
             </div>
           </div>
-        </div>
-        <div class="footer">
-          <p class="photoCredit">
-            Background image courtesy:
-            <a href="https://www.freepiks.com">freepiks.com</a>
-          </p>
-          <footer>&copy;Egberanmwen Iriagbonse, 2022</footer>
+          <div class="footer">
+              <p class="photoCredit">
+                Background image courtesy:
+                <a href="https://www.freepiks.com">freepiks.com</a>
+              </p>
+              <footer>&copy;Egberanmwen Iriagbonse, 2022</footer>
+          </div>
         </div>
       </div>
     </div>
-
     <script src="../main/app.js"></script>
   </body>
 </html>
